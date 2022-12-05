@@ -1,0 +1,11 @@
+*{
+    margin: 0;
+    background-color: white ;
+}
+
+.LandingPage{
+    text-align: center;
+} 
+.LandingPage, h1{
+    color: #034752;
+}
