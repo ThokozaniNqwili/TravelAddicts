@@ -1,11 +1,111 @@
 *{
     margin: 0;
-    background-color: white ;
+    /* background-color: white ; */
 }
 
 .LandingPage{
     text-align: center;
-} 
-.LandingPage, h1{
     color: #034752;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+ 
+  background-color:#034752;
+ 
+}
+.accomodation{
+    gap:2rem;
+    padding: 0;
+}
+#Product, h1{
+    text-align: center;
+} 
+/* .card-text{
+    font-size: 0.8rem;
+} */
+
+/* Checkout Page */
+form{
+    border: 1px solid black;
+}
+.CheckoutPage{
+    text-align: center;
+    color: #034752;
+}
+/* Admin Page */
+.column{
+    border: 1px solid black;
+}
+.btnPrice, .btnAdd {
+    
+    margin: 1rem;
+    border: 1px solid black;
+    padding: 0.7rem ;
+    border-radius: 1rem;
+    
+    
+}
+.admin{
+    justify-content: end;
+}
+/* Footer */
+footer{
+    position: relative;
+    width: 100;
+    background-color: #D47865;
+    height: auto;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+footer .social_icon, 
+footer .menu
+{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    background-color: transparent;
+
+
+}
+footer .social_icon a 
+{
+    font-size: 2em;
+    color:#034752 ;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+    background-color:transparent;
+
+}
+footer .social_icon a:hover{
+transform: translateY(-10px);
+}
+footer .menu li{
+    list-style: none; 
+}
+footer .menu li a
+{
+    
+   font-size: 1.3em;
+    color: #034752 ;
+    margin: 0 10px;
+    display: inline-block;
+    text-decoration: none;
+    opacity: 0.75;
+    background: transparent;
+}
+footer .menu li a:hover{
+    opacity: 1;
+}
+footer p{
+    color: #034752 ;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
 }
