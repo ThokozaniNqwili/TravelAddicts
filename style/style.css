@@ -13,13 +13,29 @@
   background-color:#034752;
  
 }
-.accomodation{
-    gap:2rem;
-    padding: 0;
+.navbar{
+    background-color: #D47865;
 }
-#Product, h1{
+
+
+
+.btnCheckout{
+    
+    width: 30%;
+    color: #034752; 
+    text-decoration: none;
+    padding: 0.8rem;
+    border-radius: 2rem;
+    justify-content: end;
+    
+
+}
+
+#Product{
     text-align: center;
+    padding: 1rem;
 } 
+
 /* .card-text{
     font-size: 0.8rem;
 } */
@@ -42,12 +58,23 @@ form{
     border: 1px solid black;
     padding: 0.7rem ;
     border-radius: 1rem;
+    transform: translateX(70rem);
+    
     
     
 }
 .admin{
     justify-content: end;
 }
+.adminForm{
+    width: 50%;
+    visibility: hidden;
+}
+
+   
+
+
+
 /* Footer */
 footer{
     position: relative;
