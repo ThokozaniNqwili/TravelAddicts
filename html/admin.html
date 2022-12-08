@@ -10,24 +10,23 @@
     <title>Travel Addicts</title>
 </head>
 <body>
+
+  <div class="container-fluid">
     
          <!-- Navigation -->
-         <nav class="navbar navbar-expand-lg navbar-light bg-light">
+         <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#">Travel Addicts</a>
+              <a class="navbar-brand" href="/index.html">Travel Addicts</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Accomodation</a>
+                    <a class="nav-link" href="/html/admin.html">Admin</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Admin</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Checkout</a>
+                    <a class="nav-link" href="/html/checkout.html">Checkout</a>
                   </li>
                   
                 </ul>
@@ -37,50 +36,66 @@
           <div class="Admin">
             
          
-            <button type="button" class="btnPrice"><i class="fa-regular fa-arrow-down-arrow-up "></i> Sort by Price</button>
-            <button type="button" class="btnAdd"><i class="fa-solid fa-plus "></i> Accomodation </button>
-
-            
-
-          </div>
-
-          <table class="table table-hover records">
-            <thead>
-              <tr>
-                <th scope="col">ID</th>
-                <th scope="col">Name</th>
-                <th scope="col">imgUrl</th>
-                <th scope="col">Price</th>
-                <th scope="col">Location</th>
-                <th scope="col">Edit/Delete</th>
-              </tr>
-            </thead>
-           
-          </table>
+            <button type="button" onclick="sort()" class="btnPrice"><i class="fas fa-sort "></i> Sort by Price</button>
 
 
+          <!-- Add Accomodation modal -->
+<button type="button" class="btnAdd" data-bs-toggle="modal" data-bs-target="#addAccomodation">
+  <i class="fa-solid fa-plus "></i> Accomodation
+</button>
 
-          <div class="container-fluid">
-            <form class="adminForm">
-              <h2>Please complete the following:</h2>
-              <input id = "accomodationID" type="text" placeholder="Enter Accomodation ID " required>
-              <input id = "accomodationName" type="text" placeholder="Enter Accomodation Name" required>
-              <input id = "imgUrl" type="text" placeholder="Enter image url" required>
-              <input id = "accomodationPrice" type="number" placeholder="Enter Price p/night" required>
-              <input id = "accomodationLocation" type="text" placeholder="Enter Location" required>
-              <button type="button" class="btnClose" >Close</button>
-              <button type="button" class="btnSave"> Add Accomodation</button>
-              </form>
-
-
-             
-
-          </div>
-
-          
-        
-      
+<!-- Modal -->
+<div class="modal fade" id="addAccomodation" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Create Accomodation</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+              <label for="">Accomodation ID  </label><br>
+              <input id = "accomodationID" type="number" placeholder="Enter Accomodation ID " required><br><br>
+              <label for="">Accomodation Name</label><br>
+              <input id = "accomodationName" type="text" placeholder="Enter Accomodation Name" required><br><br>
+              <label for="">image url </label><br>
+              <input id = "imgUrl" type="text" placeholder="Enter image url" required><br><br>
+              <label for="">Price p/Night R  </label><br>
+              <input id = "accomodationPrice" type="number" placeholder="Enter Price p/night" required><br><br>
+              <label for="">Accomodation Location</label><br>
+              <input id = "accomodationLocation" type="text" placeholder="Enter Location" required><br><br>
+              
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btnClose" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btnSave"><i class="fas fa-save "></i> Save</button>
+      </div>
     </div>
+  </div>
+</div>
+</div>
+
+  
+
+
+<table class="table table-hover records">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">imgUrl</th>
+      <th scope="col">Price</th>
+      <th scope="col">Location</th>
+      <th scope="col">Edit</th>
+      <th scope="col">Delete</th>
+    </tr>
+  </thead>
+ 
+</table>
+  </div>
+
+
+
+
 
 
     

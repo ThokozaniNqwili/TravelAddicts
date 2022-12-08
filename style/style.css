@@ -42,36 +42,58 @@
 
 /* Checkout Page */
 form{
-    border: 1px solid black;
+    border: none;
 }
+.checkoutTable{
+    overflow-x:auto;
+    
+}
+
+table, th, td {
+    
+    padding: 0.5rem;
+    
+    border-collapse: collapse;
+  }
+table input{
+    width: 10rem; 
+}
+table th {
+    text-align: left;
+}
+
 .CheckoutPage{
     text-align: center;
     color: #034752;
+}
+#night-value{
+    width: 7rem;
+}
+.btnSubmit{
+   transform:translate(-44rem);
 }
 /* Admin Page */
 .column{
     border: 1px solid black;
 }
-.btnPrice, .btnAdd {
+.btnPrice, .btnAdd, .btnClose, .btnSave {
     
     margin: 1rem;
-    border: 1px solid black;
+    color: #034752;
+    border: none;
     padding: 0.7rem ;
-    border-radius: 1rem;
-    transform: translateX(70rem);
-    
-    
-    
-}
-.admin{
-    justify-content: end;
-}
-.adminForm{
-    width: 50%;
-    visibility: hidden;
-}
-
+    background-color: white;
+    font-size: 1.3rem;
    
+   
+    
+}
+.modal-body input{
+    width: 20rem;
+}
+.fas fa-edit a{
+    color:#D47865;
+}
 
 
 
