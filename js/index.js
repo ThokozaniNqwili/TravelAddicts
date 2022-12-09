@@ -74,7 +74,7 @@ async function displayAccomodation() {
           <h5 class="card-title">${item.name}, ${item.location}</h5>
           <p class="card-text">R ${item.price} p/night , <i class='fas fa-user-friends' style='font-size:20px'></i> guests<br>
            ${item.description}</p>
-           <a href="/html/checkout.html" id="${item.id}" class="btn btn-primary">Go somewhere</a>
+           <a href="#" id="${item.id}" onclick="addItems()" class="btn btn-primary">Go somewhere</a>
         </div>
       </div>`;
      
@@ -83,6 +83,10 @@ async function displayAccomodation() {
 
 }
 displayAccomodation();
+
+function addItems(){
+    alert("windows");
+}
 
 
 //////====-----Checkout-----======///////

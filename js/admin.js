@@ -79,6 +79,9 @@ function deleteAccomodation(id) {
  
   console.table(accommodation);
 }
+function addItems(){
+    alert("alert")
+}
 
 
 // function sort(){
