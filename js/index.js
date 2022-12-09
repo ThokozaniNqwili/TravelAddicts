@@ -26,7 +26,7 @@ let accomodation = JSON.parse(localStorage.getItem("accomodation"))
     imgUrl: "https://i.postimg.cc/Gh4y1Nr2/revato-480812-12100737-644980.jpg",
     price: 1291,
     
-    location: "Johanesburg",
+    location: "Johannesburg",
     description:
       "Situated in the heart of Sandton's business district, home to top investment banks, financial institutions, the Gautrain station and the Johannesburg Stock Exchange.",
   },
@@ -36,7 +36,7 @@ let accomodation = JSON.parse(localStorage.getItem("accomodation"))
     imgUrl: "https://i.postimg.cc/FHLGhp3y/aquanzi.jpg",
     price: 1496,
    
-    location: "Johanesburg",
+    location: "Johannesburg",
     description:
       "The 4 Star Aquanzi Lodge is situated just minutes from the upmarket Fourways suburb, set in a superb indigenous garden between aloes and acacia trees and offers comfortable and luxurious bed and breakfast and self-catering accommodation ",
   },
@@ -45,7 +45,6 @@ let accomodation = JSON.parse(localStorage.getItem("accomodation"))
     name: "Anthurium Lodge B & B",
     imgUrl: "https://i.postimg.cc/pTQwGxq6/anthurium-lodge-b-b.jpg",
     price: 1152,
-    coastal: true,
     location: "Durban",
     description:
       "Our bedrooms are clean, spacious and very comfortable. We serve a buffet and cooked breakfast under our popular Gazebo, overlooking the koi pond and pool.",
@@ -55,14 +54,18 @@ let accomodation = JSON.parse(localStorage.getItem("accomodation"))
     name: "The Riverside Hotel",
     imgUrl: "https://i.postimg.cc/Qd2vMv8Y/glen-boutique-hotel.jpg",
     price: 1384,
-    coastal: true,
     location: "Durban",
     description:
       "Five minutes from the city centre of Durban, with wonderful views across a magnificent green belt stretching from the Umgeni River to the Indian Ocean. The Riverside Hotel reflects resort life in the city.",
   },
 ];
 
-async function display() {
+localStorage.setItem("accomodation", JSON.stringify(accomodation));
+
+console.log(accomodation);
+
+// display Products
+async function displayAccomodation() {
   let display = document.querySelector(".accomodation");
   accomodation.forEach((item) => {
     display.innerHTML += `<div class="card" style="width: 30rem;">
@@ -71,23 +74,128 @@ async function display() {
           <h5 class="card-title">${item.name}, ${item.location}</h5>
           <p class="card-text">R ${item.price} p/night , <i class='fas fa-user-friends' style='font-size:20px'></i> guests<br>
            ${item.description}</p>
-          <a href="/html/checkout.html" class="btnCheckout">Add to <i class="fa fa-shopping-cart" style="font-size:24px"></i></a>
+           <a href="/html/checkout.html" id="${item.id}" class="btn btn-primary">Go somewhere</a>
         </div>
       </div>`;
+     
   });
-}
-display();
+  
 
-let filterlocation = document.getElementById("location");
-filterlocation.addEventListener("change", (e) => {
-var newlocation = accomodation.filter(item => {
-  return item.location == e.t
-  arget.value
 }
-);
-console.log(newlocation);
-  display();
-   });
+displayAccomodation();
+
+
+//////====-----Checkout-----======///////
+
+
+// let checkout = document.querySelector('.btnCheckout');
+// let checkoutArray = [];
+
+// let item = [];
+
+// for (const key in item) {
+//  console.log(item[key]);
+    
+    
+//   }
+
+
+// localStorage.setItem("checkout", JSON.stringify(item))
+
+
+// let checkout= JSON.parse(localStorage.getItem("checkout"))
+
+// function addCheckout(){
+//   console.table(checkout)
+// }
+
+
+
+
+
+
+
+
+
+
+// for (const i in accomodation) {
+//   console.log(accomodation[item]);
+
+
+//   function addcheckout(){
+//     console.log(item);
+    
+//   }
+
+
+
+// checkout.addEventListener('click',(e)=>{
+  
+//   console.log(accomodation[item]);
+//   let newItem = document.querySelector("#item");
+//   document.querySelector("#item").value = accomodation[item];
+  
+//   // accomodation[item].forEach((i) => {
+//   //   newItem.value += `<td>${item.name}</td>`
+
+//   // });
+
+ 
+// });
+ 
+
+
+
+
+
+
+
+
+
+// 
+  
+// checkoutArray.push(accomodation[item])
+  
+//  })
+//  console.log(checkoutArray);
+// console.log(accomodation[item]);
+//  console.log(checkoutArray);
+
+
+
+
+
+//  let checkout = accomodation[i]; let checkout = document.querySelector('.btnCheckout');
+// console.log(checkout)
+// // let checkout = JSON.parse(localStorage.getItem('checkout'))? 
+// // JSON.parse(localStorage.getItem('checkout')): []
+// let item = document.querySelector('#item');
+
+// checkout.addEventListener('click',(e)=>{
+
+//   console.log(accomodation)
+
+// });
+
+
+
+
+
+
+
+// function CheckOut(){
+//   this.id = id;
+//   this.name = name;
+//   this.price= price;
+//   this.location= location;
+
+  
+// }
+// console.log();
+
+
+
+
 
 
 
