@@ -1,3 +1,4 @@
+let checkoutItems = []
 let accomodation = JSON.parse(localStorage.getItem("accomodation"))
   ? JSON.parse(localStorage.getItem("accomodation"))
   : [
@@ -61,8 +62,9 @@ let accomodation = JSON.parse(localStorage.getItem("accomodation"))
 ];
 
 localStorage.setItem("accomodation", JSON.stringify(accomodation));
+localStorage.setItem("cart",JSON.stringify(checkoutItems))
+// let cartItems = JSON.parse(localStorage.getItem("cart"))
 
-console.log(accomodation);
 
 // display Products
 async function displayAccomodation() {
@@ -74,7 +76,7 @@ async function displayAccomodation() {
           <h5 class="card-title">${item.name}, ${item.location}</h5>
           <p class="card-text">R ${item.price} p/night , <i class='fas fa-user-friends' style='font-size:20px'></i> guests<br>
            ${item.description}</p>
-           <a href="#" id="${item.id}" onclick="addItems()" class="btn btn-primary">Go somewhere</a>
+           <a href="/html/checkout.html" id="${item.id}" onclick="addItems(${item.id})" class="btn btn-primary">Go somewhere</a>
         </div>
       </div>`;
      
@@ -84,8 +86,18 @@ async function displayAccomodation() {
 }
 displayAccomodation();
 
-function addItems(){
-    alert("windows");
+
+
+function addItems(id){
+  alert(id);
+  checkoutItems.push(accomodation[id])
+  console.log(checkoutItems);
+  
+  localStorage.setItem('cart',JSON.stringify(checkoutItems))
+  document.location.reload()
+
+
+    
 }
 
 
