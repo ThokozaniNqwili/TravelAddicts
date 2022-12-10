@@ -53,7 +53,7 @@ table, th, td {
     
     padding: 0.5rem;
     
-    border-collapse: collapse;
+    border-collapse: collapse !important;
   }
 table input{
     width: 10rem; 
@@ -73,6 +73,8 @@ table th {
    transform:translate(-44rem);
 }
 /* Admin Page */
+
+
 .column{
     border: 1px solid black;
 }
@@ -135,18 +137,19 @@ footer .social_icon a:hover{
 transform: translateY(-10px);
 }
 footer .menu li{
-    list-style: none; 
+    list-style:none; 
 }
 footer .menu li a
 {
-    
-   font-size: 1.3em;
+
+    font-size: 1em;
     color: #034752 ;
-    margin: 0 10px;
-    display: inline-block;
+    margin: 0 1rem;
+    display: block;
     text-decoration: none;
     opacity: 0.75;
     background: transparent;
+    overflow: auto;
 }
 footer .menu li a:hover{
     opacity: 1;

@@ -97,11 +97,19 @@ function deleteAccomodation(id) {
   console.table(accommodation);
 }
 
-// function sort(){
-//     accommodation.sort(
-//       (p1, p2) =>
-//       (p1.price < p2.price) ? 1 : (p1.price > p2.price) ? -1 : 0);
-//       console.table(accommodation);
+// let filter = document.querySelector(".btnSearch");
+// let input = document.querySelector(".search")
 
+// filter.addEventListener('key',() => {
+//   try{
+//     if(input != 'cape town') throw "enter province";
+//     locationfilter
 //   }
-//   sort();
+
+// });
+
+
+
+
+
+
