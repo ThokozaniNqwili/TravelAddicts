@@ -21,7 +21,7 @@ async function display() {
   });
 }
 display();
-console.log(accommodation);
+
 
 let modal = document.querySelector("#update");
 let saveupdate = document.querySelector(".btnUpdate");
@@ -94,7 +94,6 @@ function deleteAccomodation(id) {
   });
   localStorage.setItem("accomodation", JSON.stringify(accommodation));
 
-  console.table(accommodation);
 }
 
 let filter = document.querySelector(".btnSearch");

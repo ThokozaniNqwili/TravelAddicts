@@ -63,7 +63,7 @@ let accomodation = JSON.parse(localStorage.getItem("accomodation"))
 
 localStorage.setItem("accomodation", JSON.stringify(accomodation));
 localStorage.setItem("cart",JSON.stringify(checkoutItems))
-// let cartItems = JSON.parse(localStorage.getItem("cart"))
+
 
 
 // display Products
@@ -89,7 +89,7 @@ displayAccomodation();
 
 
 function addItems(id){
-  alert(id);
+  
   checkoutItems.push(accomodation[id])
   console.log(checkoutItems);
   
