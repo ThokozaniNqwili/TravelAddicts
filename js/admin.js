@@ -1,7 +1,7 @@
 let accommodation = JSON.parse(localStorage.getItem("accomodation"));
-
-function display() {
-  let record = document.querySelector(".records");
+let record = document.querySelector(".records");
+async function display() {
+  
   record.innerHTML = '';
   accommodation.forEach((item) => {
     record.innerHTML += `
@@ -97,16 +97,45 @@ function deleteAccomodation(id) {
   console.table(accommodation);
 }
 
-// let filter = document.querySelector(".btnSearch");
-// let input = document.querySelector(".search")
+let filter = document.querySelector(".btnSearch");
+let input = document.querySelector("#search")
 
-// filter.addEventListener('key',() => {
-//   try{
-//     if(input != 'cape town') throw "enter province";
-//     locationfilter
-//   }
+input.addEventListener('keyup',() => {
+  console.log(input);
 
-// });
+  if(!input.value.length){
+    display()
+  }
+
+  let filterbylocation = accommodation.filter((item)=>{
+    return item.location.toLowerCase().includes(input.value.toLowerCase())
+    })
+    record.innerHTML = '';
+  filterbylocation.forEach((item) => {
+    record.innerHTML += `
+      <tr>
+        <th scope="row">${item.id}</th>
+        <td>${item.name}</td>
+        <td>${item.imgUrl}</td>
+        <td>R,${item.price}</td>
+        <td>${item.location}</td>
+        
+        <td><button class="btnUpdate" data-bs-toggle="modal" data-bs-target="#update" onclick="update(${item.id})">
+       <i class="fa-solid fa-edit" style='font-size:20px'></i></button></td>
+        <td><i class='fas fa-trash-alt' style='font-size:20px' onclick="deleteAccomodation(this)"></i></td>
+        <td></td>
+      </tr>
+      `;
+  });
+});
+
+
+
+
+    
+
+
+
 
 
 
